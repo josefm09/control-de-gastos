@@ -1,20 +1,22 @@
 .balance {
   transition: all 0.3s ease 0s;
-  background-color: white;
+  background-color: var(--card-background);
   margin-top: 20px;
   padding: 15px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  box-shadow: 0 4px 8px var(--shadow-color);
 }
 
 .title {
   font-size: 18px;
   font-weight: 700;
+  color: var(--text-color);
 }
 
 .month-balance {
-  color: #6582f8;
+  color: var(--primary-color);
   font-weight: 700;
   font-size: 2.2rem;
   margin: 0;
@@ -29,11 +31,11 @@
 }
 
 .money-container.plus {
-  color: #75d58e;
+  color: var(--income-color);
 }
 
 .money-container.minus {
-  color: #ff898d;
+  color: var(--expense-color);
 }
 
 .money-container {
@@ -44,6 +46,7 @@
   padding: 0%;
   margin: 0%;
   font-size: small;
+  color: var(--text-color);
 }
 
 .money {

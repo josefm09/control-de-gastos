@@ -1,5 +1,5 @@
 import React, { useContext, useState, useEffect, useRef } from "react";
-import { Container, Row, Col } from "react-bootstrap";
+import { Container, Row, Col, Button } from "react-bootstrap";
 import { GlobalContext } from "../../context/GlobalState";
 import "./index.css";
 
@@ -18,7 +18,7 @@ const months = [
   "Diciembre",
 ];
 
-export const Header = () => {
+export const Header = ({ toggleTheme, currentTheme }) => {
   const { setMonth, currentMonth } = useContext(GlobalContext);
   const [selectedMonth, setSelectedMonth] = useState(currentMonth);
   const headerRef = useRef(null);
@@ -60,6 +60,15 @@ export const Header = () => {
                 {month}
               </div>
             ))}
+          </Col>
+          <Col xs="auto" className="theme-toggle">
+            <Button 
+              variant="link" 
+              onClick={toggleTheme} 
+              className="theme-button"
+            >
+              {currentTheme === "light" ? "🌙" : "☀️"}
+            </Button>
           </Col>
         </Row>
       </Container>

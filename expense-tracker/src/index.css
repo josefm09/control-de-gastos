@@ -1,7 +1,33 @@
 @import url("https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap");
+
+:root {
+  --background-color: #e4e9ed;
+  --text-color: #333;
+  --card-background: white;
+  --primary-color: #6582f8;
+  --income-color: #75d58e;
+  --expense-color: #ff898d;
+  --shadow-color: rgba(0, 0, 0, 0.1);
+  --border-color: rgba(0, 0, 0, 0.1);
+  --muted-text: #6c757d;
+}
+
+[data-theme="dark"] {
+  --background-color: #121212;
+  --text-color: #e0e0e0;
+  --card-background: #1e1e1e;
+  --primary-color: #4a6ce3;
+  --income-color: #5cb270;
+  --expense-color: #e06c70;
+  --shadow-color: rgba(0, 0, 0, 0.3);
+  --border-color: rgba(255, 255, 255, 0.1);
+  --muted-text: #a0a0a0;
+}
+
 body {
   margin: 0;
-  background-color: #e4e9ed !important ;
+  background-color: var(--background-color) !important;
+  color: var(--text-color);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

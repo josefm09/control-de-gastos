@@ -1,6 +1,7 @@
 import React, { useState, useContext } from "react";
 import { GlobalContext } from "../../context/GlobalState";
 import { Button, Modal, Form } from "react-bootstrap";
+import "./modal.css";
 
 export const AddTransactionModal = () => {
   const [text, setText] = useState("");
@@ -44,7 +45,7 @@ export const AddTransactionModal = () => {
 
   return (
     <>
-      <Modal show={showModal} onHide={handleCloseModal}>
+      <Modal show={showModal} onHide={handleCloseModal} className="custom-modal">
         <Modal.Header closeButton>
           <Modal.Title>Agregar Movimiento</Modal.Title>
         </Modal.Header>
@@ -58,6 +59,7 @@ export const AddTransactionModal = () => {
                 onChange={(e) => setText(e.target.value)}
                 required={true}
                 placeholder="Agrega una descripción"
+                className="custom-input"
               />
             </Form.Group>
 
@@ -69,8 +71,9 @@ export const AddTransactionModal = () => {
                 required={true}
                 onChange={(e) => setAmount(e.target.value)}
                 placeholder="Ingresa la cantidad..."
+                className="custom-input"
               />
-              <Form.Text className="text-muted">
+              <Form.Text className="text-muted custom-text-muted">
                 (Negativo - Gasto, Positivo - Ingreso)
               </Form.Text>
             </Form.Group>
@@ -79,23 +82,19 @@ export const AddTransactionModal = () => {
           </Form>
         </Modal.Body>
         <Modal.Footer>
-          <Button variant="secondary" onClick={handleCloseModal}>
+          <Button variant="outline-secondary" onClick={handleCloseModal} className="custom-button-secondary">
             Cerrar
           </Button>
-          <Button variant="primary" onClick={onSubmit}>
+          <Button variant="primary" onClick={onSubmit} className="custom-button-primary">
             Guardar Cambios
           </Button>
         </Modal.Footer>
       </Modal>
 
-      <div className="fixed-bottom">
+      <div className="fixed-bottom d-flex justify-content-center mb-3">
         <Button
           onClick={handleShowModal}
-          style={{
-            width: "250px",
-            backgroundColor: "#6582f8",
-            fontWeight: "bold",
-          }}
+          className="add-transaction-button"
         >
           Agregar Movimiento
         </Button>

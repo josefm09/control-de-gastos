@@ -1,0 +1,48 @@
+.custom-modal .modal-content {
+  background-color: var(--card-background);
+  color: var(--text-color);
+}
+
+.custom-modal .modal-header {
+  border-bottom-color: rgba(128, 128, 128, 0.2);
+}
+
+.custom-modal .modal-footer {
+  border-top-color: rgba(128, 128, 128, 0.2);
+}
+
+.custom-modal .close {
+  color: var(--text-color);
+}
+
+.custom-input {
+  background-color: var(--background-color) !important;
+  color: var(--text-color) !important;
+  border-color: rgba(128, 128, 128, 0.3) !important;
+}
+
+.custom-input::placeholder {
+  color: rgba(128, 128, 128, 0.7);
+}
+
+.custom-text-muted {
+  color: rgba(128, 128, 128, 0.8) !important;
+}
+
+.custom-button-primary {
+  background-color: var(--primary-color) !important;
+  border-color: var(--primary-color) !important;
+}
+
+.custom-button-secondary {
+  color: var(--text-color) !important;
+  border-color: rgba(128, 128, 128, 0.5) !important;
+}
+
+.add-transaction-button {
+  width: 250px;
+  background-color: var(--primary-color) !important;
+  border-color: var(--primary-color) !important;
+  font-weight: bold;
+  box-shadow: 0 4px 8px var(--shadow-color);
+}
